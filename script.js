@@ -112,6 +112,7 @@ function showLastCard(event) {
   const lastCard = document.createElement('img');
   lastCard.className = 'last-card';
   lastCard.classList.add('open');
+
   if (difficulty === 'very-easy') {
     if (currentColor === 'green') {
       const currentDifficulty = cardsDataGreen.find(
@@ -135,6 +136,7 @@ function showLastCard(event) {
       counterCard--;
     }
   }
+
   let elementImg = decks.children[1];
 
   if (elementImg !== undefined) {
@@ -143,6 +145,19 @@ function showLastCard(event) {
   decks.append(lastCard);
 
   decreaseCounter();
+
+  console.log(counterCard, currentColor);
+  if (counterCard === 0 && currentColor === 'blue') {
+    currentLevel++;
+    currentColor = 'green';
+    if (currentLevel === 1) {
+      counterCard = currentAncient.secondStage.greenCards;
+    }
+    if (currentLevel === 2) {
+      counterCard = currentAncient.thirdStage.greenCards;
+    }
+  }
+
   changeDotColor();
   updateCounter();
 }
@@ -233,12 +248,7 @@ function changeDotColor() {
       currentColor = 'blue';
       return;
     }
-    if (currentColor === 'blue') {
-      currentColor = 'green';
-      return;
-    }
   }
-  console.log('currentColor-counterCard0', currentColor);
 }
 
 function updateCounter() {
@@ -278,6 +288,6 @@ function updateCounter() {
       counterCard = currentAncient.thirdStage.blueCards;
     }
   }
-  console.log(counterCard);
+
   // currentAncient
 }
