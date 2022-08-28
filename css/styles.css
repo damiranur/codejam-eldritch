@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+body {
+  background-image: url(/assets/home.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.ancients-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  min-width: 40%;
+  padding: 20px;
+}
+
+.ancient-card {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 260px;
+  width: 200px;
+}
+
+.ancients-container .ancient-card.active {
+  border: 2px solid red;
+}
+
+.difficulty-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+}
+
+.difficulty-container.open {
+  opacity: 1;
+}
+.difficulty-container .difficulty {
+  border: 2px solid purple;
+  color: purple;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.shuffle-button {
+  border: 2px solid purple;
+  color: purple;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.shuffle-button.open {
+  opacity: 1;
+}
+
+.deck-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  min-width: 30%;
+}
+
+.deck-container .current-state {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 30%;
+  opacity: 0;
+}
+
+.deck-container .current-state.open {
+  opacity: 1;
+}
+
+.deck-container .current-state .stage-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.deck-container .current-state .stage-container .stage-text {
+  color: purple;
+}
+
+.deck-container .current-state .stage-container .dots-container {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.deck-container .current-state .stage-container .dot {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.deck-container .current-state .stage-container .dot.green {
+  background-color: green;
+}
+
+.deck-container .current-state .stage-container .dot.brown {
+  background-color: brown;
+}
+
+.deck-container .current-state .stage-container .dot.blue {
+  background-color: blue;
+}
+
+.deck-container .decks {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  opacity: 0;
+}
+
+.deck-container .decks.open {
+  opacity: 1;
+}
+
+.deck-container .deck {
+  cursor: pointer;
+  background-size: cover;
+  height: 190px;
+  width: 130px;
+}
+
+.deck-container .last-card {
+  background-size: cover;
+  height: 190px;
+  width: 130px;
+  opacity: 0;
+}
+
+.deck-container .last-card.open {
+  opacity: 1;
+}

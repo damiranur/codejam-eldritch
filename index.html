@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Eldritch</title>
+  </head>
+  <body>
+    <div class="ancients-container"></div>
+    <div class="difficulty-container">
+      <button class="difficulty" id="very-easy">Very easy</button>
+      <button class="difficulty" id="easy">Easy</button>
+      <button class="difficulty" id="medium">Medium</button>
+      <button class="difficulty" id="high">High</button>
+      <button class="difficulty" id="very-high">Very high</button>
+    </div>
+    <div class="deck-container">
+      <button class="shuffle-button">Shuffle</button>
+      <div class="current-state">
+        <div class="stage-container">
+          <span class="stage-text">Level 1</span>
+          <div class="dots-container" id="level-one">
+            <div class="dot green"></div>
+            <div class="dot brown"></div>
+            <div class="dot blue"></div>
+          </div>
+        </div>
+        <div class="stage-container">
+          <span class="stage-text">Level 2</span>
+          <div class="dots-container" id="level-two">
+            <div class="dot green"></div>
+            <div class="dot brown"></div>
+            <div class="dot blue"></div>
+          </div>
+        </div>
+        <div class="stage-container">
+          <span class="stage-text">Level 2</span>
+          <div class="dots-container" id="level-three">
+            <div class="dot green"></div>
+            <div class="dot brown"></div>
+            <div class="dot blue"></div>
+          </div>
+        </div>
+      </div>
+      <div class="decks">
+        <div
+          class="deck"
+          style="background-image: url(./assets/mythicCardBackground.png)"
+        ></div>
+      </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
