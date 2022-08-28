@@ -9,12 +9,9 @@ const shuffleButton = document.querySelector('.shuffle-button');
 const currentState = document.querySelector('.current-state');
 const decks = document.querySelector('.decks');
 const deck = document.querySelector('.deck');
-const lastCard = document.querySelector('.last-card');
 const levelOne = document.getElementById('level-one');
 const levelTwo = document.getElementById('level-two');
 const levelThree = document.getElementById('level-three');
-const greenDot = document.querySelector('.green');
-const brownDot = document.querySelector('.brown');
 
 let cardId;
 let difficulty;
@@ -146,7 +143,6 @@ function showLastCard(event) {
 
   decreaseCounter();
 
-  console.log(counterCard, currentColor);
   if (counterCard === 0 && currentColor === 'blue') {
     currentLevel++;
     currentColor = 'green';
